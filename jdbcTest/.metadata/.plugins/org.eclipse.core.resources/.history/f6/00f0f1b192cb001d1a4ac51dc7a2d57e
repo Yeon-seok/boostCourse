@@ -1,0 +1,19 @@
+package kr.or.connect.jdbcexam.dao;
+
+import java.util.Arrays;
+import java.util.List;
+
+import kr.or.connect.jdbcexam.dto.Role;
+
+public class JdbcTest {
+	
+	public static void main(String[] args) {
+		RoleDao roleDao = new RoleDao();
+		roleDao.addRole(500, "programmer");
+		roleDao.addRole(600, "programmer2");
+		roleDao.addRole(700, "programmer3");
+		roleDao.addRole(800, "programmer4");
+		List<Role> temp = roleDao.allRole();
+		System.out.println(temp);
+	}
+}

@@ -1,0 +1,83 @@
+package com.ys.businesscard.dao;
+
+import java.sql.*;
+
+public class CardDao {
+	
+	static String url = "";
+	static String id = "root";
+	static String password = "1234";
+	
+	public void addCard(String name, String phone, String company) {
+		Connection con = null;
+		PreparedStatement ps = null;
+		try {
+			Class.forName("");
+			con = DriverManager.getConnection(url, id , password);
+			String sql = "insert into card values (name, phone, company)";
+			ps = con.prepareStatement(sql);
+			ps.executeUpdate();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			if(ps!=null) {
+				try {
+					ps.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			if(con!=null) {
+				try {
+					con.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+	
+	public void searchCard(String name) {
+		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		try {
+			Class.forName("");
+			con = DriverManager.getConnection(url, id , password);
+			String sql = "select * from card where name = ?";
+			ps = con.prepareStatement(sql);
+			ps.setString(1, name);
+			rs = ps.executeQuery();
+			while(rs.next()) {
+				String name2 = rs.getString(1);
+				String phoneNumber = rs.getString(1);
+				String company = rs.getString(1);
+			}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			if(ps!=null) {
+				try {
+					ps.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			if(con!=null) {
+				try {
+					con.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+}

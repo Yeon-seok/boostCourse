@@ -1,0 +1,20 @@
+package com.ys.businesscard.dao;
+
+import java.sql.*;
+
+public class CardDao {
+	
+	String url = "";
+	String id = "root";
+	String password = "1234";
+	
+	public CarDto addCard(String name, String phone, String company) {
+		Connection con = null;
+		PreparedStatement ps = null;
+		
+		try {
+			Class.forName("");
+			
+		}
+	}
+}

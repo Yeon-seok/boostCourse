@@ -1,0 +1,40 @@
+package com.ys.businesscard.dao;
+
+import java.util.Scanner;
+
+public class CardMain {
+	public static void main(String[] args) {
+		while(true) {
+			System.out.println("메뉴를 입력하세요");
+			Scanner sc = new Scanner(System.in);
+			if(select == 1) {
+				
+			}
+			if(select == 2) {
+				
+			}
+			if(select == 3) {
+				
+			}
+			else {
+				System.out.println("잘못된 입력입니다.");
+				break;
+			}
+		}
+		
+	}
+	
+	public static int menu() {
+
+		int num = sc.nextInt();
+		return num;
+	}
+	
+	public static int add() {
+		
+	}
+	
+	public static void search() {
+		
+	}
+}

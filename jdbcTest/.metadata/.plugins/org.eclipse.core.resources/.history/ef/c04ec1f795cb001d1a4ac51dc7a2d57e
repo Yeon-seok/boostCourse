@@ -1,0 +1,7 @@
+package com.ys.businesscard.dto;
+
+public class CardDto {
+	String name;
+	String phoneNumber;
+	Strubg company;
+}

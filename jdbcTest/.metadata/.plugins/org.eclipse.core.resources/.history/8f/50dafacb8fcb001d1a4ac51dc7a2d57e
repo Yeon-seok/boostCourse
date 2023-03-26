@@ -1,0 +1,9 @@
+package kr.or.connect.jdbcexam.dao;
+
+public class JdbcTest {
+	
+	public static void main(String[] args) {
+		RoleDao roleDao = new RoleDao();
+		roleDao.getRole(100);
+	}
+}
