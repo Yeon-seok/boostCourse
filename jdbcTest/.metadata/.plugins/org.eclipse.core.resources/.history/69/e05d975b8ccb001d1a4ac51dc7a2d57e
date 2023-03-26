@@ -1,7 +1,0 @@
-package kr.or.connect.jdbcexam;
-
-public class RoleDao {
-	public Role getRole() {
-		
-	}
-}

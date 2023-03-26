@@ -1,9 +1,0 @@
-package kr.or.connect.jdbcexam.dto;
-
-import kr.or.connect.jdbcexam.dto.Role;
-
-public class RoleDao {
-	public Role getRole() {
-		
-	}
-}
